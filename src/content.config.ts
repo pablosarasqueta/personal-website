@@ -21,6 +21,7 @@ const indexSections = z.object({
         linkedin: z.string(),
         cv: z.string(),
         languageLabel: z.string(),
+        themeLabel: z.string(),
     }),
     hero: z.object({
         titleLead: z.string(),

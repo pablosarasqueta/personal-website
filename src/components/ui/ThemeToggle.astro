@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<button
+    type="button"
+    class="flex cursor-pointer items-center text-muted hover:text-ink"
+    aria-label={label}
+    data-theme-toggle
+>
+    <span class="dark:hidden">
+        <Icon name="bi:sun" class="size-3.5" />
+    </span>
+    <span class="hidden dark:inline">
+        <Icon name="bi:moon" class="size-3.5" />
+    </span>
+</button>
+
+<script>
+    import { animate } from "animejs";
+    import { toggleTheme } from "../../scripts/theme";
+
+    const toggle = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            toggleTheme();
+            if (!window.matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+            animate(toggle.querySelectorAll("svg"), {
+                rotate: [-45, 0],
+                scale: [0.7, 1],
+                duration: 450,
+                ease: "outBack",
+            });
+        });
+    }
+</script>

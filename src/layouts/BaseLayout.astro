@@ -2,6 +2,7 @@
 // Base layout: shared <head> (SEO, Open Graph, JSON-LD) and <body> shell.
 // TODO: add your global chrome here (nav, theme toggle, footer...) as the project grows.
 import { THEME_COLOR } from "../lib/seo";
+import { THEME_STORAGE_KEY } from "../scripts/theme";
 
 interface Props {
     title: string;
@@ -74,6 +75,17 @@ const ogImageURL = ogImage && new URL(ogImage, Astro.site);
     </head>
 
     <body class="bg-(--bg-primary) font-serif text-[17px] leading-[1.68] text-(--text-color) antialiased sm:text-[18px] print:bg-white print:text-[12pt]">
+        <!-- Runs before first paint to avoid a light flash when dark mode is active. -->
+        <script is:inline define:vars={{ storageKey: THEME_STORAGE_KEY }}>
+            let stored = null;
+            try {
+                stored = localStorage.getItem(storageKey);
+            } catch {}
+            document.body.classList.toggle(
+                "dark",
+                stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches,
+            );
+        </script>
         <slot />
         <!--
             No global bootstrap script. Each component owns its client logic:

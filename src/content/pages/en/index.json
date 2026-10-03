@@ -9,7 +9,8 @@
             "email": "Email",
             "linkedin": "LinkedIn",
             "cv": "CV",
-            "languageLabel": "Language"
+            "languageLabel": "Language",
+            "themeLabel": "Toggle dark mode"
         },
         "hero": {
             "titleLead": "I started my first company at fifteen.",

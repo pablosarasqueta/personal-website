@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-paper: #f3f5f4;
     --color-paper-2: #e6ece9;
@@ -23,9 +25,21 @@
     --breakpoint-md: 901px;
 }
 
-:root {
+body {
     --bg-primary: var(--color-paper);
     --text-color: var(--color-ink);
+}
+
+body.dark {
+    --color-paper: #111a1d;
+    --color-paper-2: #182429;
+    --color-ink: #e6ece9;
+    --color-ink-soft: #c3cfcb;
+    --color-muted: #93a3a8;
+    --color-pine: #5fb39a;
+    --color-pine-deep: #0c2620;
+    --color-line: #2a3a40;
+    color-scheme: dark;
 }
 
 @layer base {

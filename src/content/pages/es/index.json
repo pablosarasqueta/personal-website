@@ -9,7 +9,8 @@
             "email": "Email",
             "linkedin": "LinkedIn",
             "cv": "CV",
-            "languageLabel": "Idioma"
+            "languageLabel": "Idioma",
+            "themeLabel": "Cambiar modo oscuro"
         },
         "hero": {
             "titleLead": "Monté mi primera empresa con quince años.",
