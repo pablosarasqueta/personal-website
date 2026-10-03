@@ -1,0 +1,89 @@
+---
+// Base layout: shared <head> (SEO, Open Graph, JSON-LD) and <body> shell.
+// TODO: add your global chrome here (nav, theme toggle, footer...) as the project grows.
+import { THEME_COLOR } from "../lib/seo";
+
+interface Props {
+    title: string;
+    description: string;
+    ogDescription?: string;
+    lang?: string;
+    alternates?: { hreflang: string; href: string }[];
+    ogImage?: string;
+    ogType?: string;
+    noindex?: boolean;
+    jsonLd?: object | object[];
+}
+
+const {
+    title,
+    description,
+    ogDescription = description,
+    lang = "en",
+    alternates = [],
+    ogImage,
+    ogType = "website",
+    noindex = false,
+    jsonLd,
+} = Astro.props;
+
+const jsonLdItems = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = ogImage && new URL(ogImage, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth motion-reduce:scroll-auto">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content={THEME_COLOR} />
+        <link rel="icon" href="/imgs/favicon/favicon.svg" type="image/svg+xml" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+            rel="stylesheet"
+        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonicalURL} />}
+        {alternates.map(alt => (
+            <link rel="alternate" hreflang={alt.hreflang} href={new URL(alt.href, Astro.site)} />
+        ))}
+
+        <meta property="og:type" content={ogType} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:url" content={canonicalURL} />
+        {ogImageURL && <meta property="og:image" content={ogImageURL} />}
+        {ogImageURL && <meta property="og:image:alt" content={title} />}
+
+        <meta name="twitter:card" content={ogImageURL ? "summary_large_image" : "summary"} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={ogDescription} />
+        {ogImageURL && <meta name="twitter:image" content={ogImageURL} />}
+
+        {jsonLdItems.map(item => (
+            <script type="application/ld+json" is:inline set:html={JSON.stringify(item)} />
+        ))}
+
+        <slot name="head" />
+    </head>
+
+    <body class="bg-(--bg-primary) font-serif text-[17px] leading-[1.68] text-(--text-color) antialiased sm:text-[18px] print:bg-white print:text-[12pt]">
+        <slot />
+        <!--
+            No global bootstrap script. Each component owns its client logic:
+            inline <script> for self-contained behaviour, or a per-domain
+            module under src/scripts/ (animations.ts, forms.ts, ...) imported
+            directly from the component that needs it. See /astro-implement.
+        -->
+    </body>
+</html>
+
+<style is:global>
+    @import "../styles/global.css";
+</style>

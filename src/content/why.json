@@ -1,0 +1,98 @@
+{
+    "en": [
+        {
+            "id": "leads",
+            "title": "I find my own leads.",
+            "text": "Explorandogs started with no customer list. I built one from scratch."
+        },
+        {
+            "id": "follow-up",
+            "title": "Nothing goes quiet by accident.",
+            "text": "Every lead had a next step in HubSpot, from first contact to booking."
+        },
+        {
+            "id": "after-sale",
+            "title": "I look after people after they've paid.",
+            "text": "My clients could reach me while they were abroad, and I followed up when they got home."
+        },
+        {
+            "id": "marketing",
+            "title": "I understand the marketing side.",
+            "text": "I ran the campaigns that filled my own pipeline and lifted email conversion by 50%."
+        },
+        {
+            "id": "numbers",
+            "title": "I'm comfortable with numbers.",
+            "text": "I studied finance and priced every trip myself."
+        },
+        {
+            "id": "spanish",
+            "title": "I can sell in Spanish.",
+            "text": "Native Spanish and Basque, so I can work Spanish-speaking accounts from day one, in English everywhere else."
+        }
+    ],
+    "es": [
+        {
+            "id": "leads",
+            "title": "Busco mis propios leads.",
+            "text": "Explorandogs empezó sin lista de clientes. La construí desde cero."
+        },
+        {
+            "id": "follow-up",
+            "title": "Nada se enfría por descuido.",
+            "text": "Cada lead tenía un siguiente paso en HubSpot, del primer contacto a la reserva."
+        },
+        {
+            "id": "after-sale",
+            "title": "Cuido a la gente después de que pague.",
+            "text": "Mis clientes podían contactarme mientras estaban en el extranjero, y les hacía seguimiento al volver a casa."
+        },
+        {
+            "id": "marketing",
+            "title": "Entiendo la parte de marketing.",
+            "text": "Llevé las campañas que llenaron mi propio pipeline y subieron la conversión del email un 50%."
+        },
+        {
+            "id": "numbers",
+            "title": "Me manejo bien con los números.",
+            "text": "Estudié finanzas y calculé yo mismo el precio de cada viaje."
+        },
+        {
+            "id": "spanish",
+            "title": "Puedo vender en español.",
+            "text": "Español y euskera nativos, así que puedo llevar cuentas de habla hispana desde el primer día, y en inglés todo lo demás."
+        }
+    ],
+    "fr": [
+        {
+            "id": "leads",
+            "title": "Je trouve mes propres leads.",
+            "text": "Explorandogs a démarré sans fichier clients. Je l'ai construit à partir de rien."
+        },
+        {
+            "id": "follow-up",
+            "title": "Rien ne tombe dans l'oubli par hasard.",
+            "text": "Chaque lead avait une prochaine étape dans HubSpot, du premier contact à la réservation."
+        },
+        {
+            "id": "after-sale",
+            "title": "Je prends soin des gens après leur paiement.",
+            "text": "Mes clients pouvaient me joindre pendant leur séjour à l'étranger, et je prenais de leurs nouvelles à leur retour."
+        },
+        {
+            "id": "marketing",
+            "title": "Je comprends le côté marketing.",
+            "text": "J'ai mené les campagnes qui ont rempli mon propre pipeline et augmenté la conversion des emails de 50 %."
+        },
+        {
+            "id": "numbers",
+            "title": "Je suis à l'aise avec les chiffres.",
+            "text": "J'ai étudié la finance et fixé moi-même le prix de chaque voyage."
+        },
+        {
+            "id": "spanish",
+            "title": "Je peux vendre en espagnol.",
+            "text": "Espagnol et basque natifs : je peux gérer des comptes hispanophones dès le premier jour, et en anglais partout ailleurs."
+        }
+    ]
+}

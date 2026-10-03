@@ -1,0 +1,20 @@
+{
+    "en": [
+        { "id": "spanish", "name": "Spanish", "level": "Native" },
+        { "id": "basque", "name": "Basque", "level": "Native" },
+        { "id": "english", "name": "English", "level": "B2, my working language in Dublin" },
+        { "id": "french", "name": "French", "level": "B2" }
+    ],
+    "es": [
+        { "id": "spanish", "name": "Español", "level": "Nativo" },
+        { "id": "basque", "name": "Euskera", "level": "Nativo" },
+        { "id": "english", "name": "Inglés", "level": "B2, mi idioma de trabajo en Dublín" },
+        { "id": "french", "name": "Francés", "level": "B2" }
+    ],
+    "fr": [
+        { "id": "spanish", "name": "Espagnol", "level": "Langue maternelle" },
+        { "id": "basque", "name": "Basque", "level": "Langue maternelle" },
+        { "id": "english", "name": "Anglais", "level": "B2, ma langue de travail à Dublin" },
+        { "id": "french", "name": "Français", "level": "B2" }
+    ]
+}

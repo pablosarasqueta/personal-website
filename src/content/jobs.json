@@ -1,0 +1,115 @@
+{
+    "en": [
+        {
+            "id": "wesco",
+            "role": "Operations Associate",
+            "company": "Wesco Anixter, Dublin",
+            "dates": "Feb 2025 – present"
+        },
+        {
+            "id": "smyths",
+            "role": "Sales Assistant",
+            "company": "Smyths Toys Superstores, Dublin",
+            "dates": "Nov – Dec 2024"
+        },
+        {
+            "id": "explorandogs",
+            "role": "Founder",
+            "company": "Explorandogs, Spain",
+            "dates": "2023 – 2024",
+            "own": true
+        },
+        { "id": "ausolan", "role": "School Cafeteria Monitor", "company": "Ausolan", "dates": "Dec 2023 – Jun 2024" },
+        {
+            "id": "mli",
+            "role": "Marketing Intern",
+            "company": "MLI International Schools, Dublin",
+            "dates": "Apr – Jun 2023"
+        },
+        { "id": "events-hotels", "role": "Events Host", "company": "Events Hotels", "dates": "Nov 2022 – Dec 2023" },
+        { "id": "cies", "role": "Telephone Operator", "company": "CIES", "dates": "Dec 2019 – Feb 2020" },
+        { "id": "hitdeporte", "role": "Founder", "company": "HitDeporte", "dates": "2015", "own": true }
+    ],
+    "es": [
+        {
+            "id": "wesco",
+            "role": "Operations Associate",
+            "company": "Wesco Anixter, Dublín",
+            "dates": "feb. 2025 – actualidad"
+        },
+        {
+            "id": "smyths",
+            "role": "Dependiente",
+            "company": "Smyths Toys Superstores, Dublín",
+            "dates": "nov. – dic. 2024"
+        },
+        {
+            "id": "explorandogs",
+            "role": "Fundador",
+            "company": "Explorandogs, España",
+            "dates": "2023 – 2024",
+            "own": true
+        },
+        {
+            "id": "ausolan",
+            "role": "Monitor de comedor escolar",
+            "company": "Ausolan",
+            "dates": "dic. 2023 – jun. 2024"
+        },
+        {
+            "id": "mli",
+            "role": "Becario de marketing",
+            "company": "MLI International Schools, Dublín",
+            "dates": "abr. – jun. 2023"
+        },
+        {
+            "id": "events-hotels",
+            "role": "Azafato de eventos",
+            "company": "Events Hotels",
+            "dates": "nov. 2022 – dic. 2023"
+        },
+        { "id": "cies", "role": "Teleoperador", "company": "CIES", "dates": "dic. 2019 – feb. 2020" },
+        { "id": "hitdeporte", "role": "Fundador", "company": "HitDeporte", "dates": "2015", "own": true }
+    ],
+    "fr": [
+        {
+            "id": "wesco",
+            "role": "Operations Associate",
+            "company": "Wesco Anixter, Dublin",
+            "dates": "févr. 2025 – aujourd'hui"
+        },
+        {
+            "id": "smyths",
+            "role": "Vendeur",
+            "company": "Smyths Toys Superstores, Dublin",
+            "dates": "nov. – déc. 2024"
+        },
+        {
+            "id": "explorandogs",
+            "role": "Fondateur",
+            "company": "Explorandogs, Espagne",
+            "dates": "2023 – 2024",
+            "own": true
+        },
+        {
+            "id": "ausolan",
+            "role": "Surveillant de cantine scolaire",
+            "company": "Ausolan",
+            "dates": "déc. 2023 – juin 2024"
+        },
+        {
+            "id": "mli",
+            "role": "Stagiaire marketing",
+            "company": "MLI International Schools, Dublin",
+            "dates": "avr. – juin 2023"
+        },
+        {
+            "id": "events-hotels",
+            "role": "Hôte événementiel",
+            "company": "Events Hotels",
+            "dates": "nov. 2022 – déc. 2023"
+        },
+        { "id": "cies", "role": "Téléopérateur", "company": "CIES", "dates": "déc. 2019 – févr. 2020" },
+        { "id": "hitdeporte", "role": "Fondateur", "company": "HitDeporte", "dates": "2015", "own": true }
+    ]
+}

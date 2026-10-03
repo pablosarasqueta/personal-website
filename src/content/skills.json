@@ -1,0 +1,71 @@
+{
+    "en": [
+        {
+            "id": "selling",
+            "title": "Selling",
+            "items": [
+                "Prospecting and outreach",
+                "Discovery and qualification",
+                "Objection handling",
+                "Closing",
+                "Account care and retention"
+            ]
+        },
+        {
+            "id": "tools",
+            "title": "Tools",
+            "items": ["HubSpot CRM", "Microsoft Office", "Shopify and WordPress", "Canva", "SAP"]
+        },
+        {
+            "id": "marketing",
+            "title": "Marketing",
+            "items": ["Email campaigns", "Social content", "SEO", "Brand building"]
+        }
+    ],
+    "es": [
+        {
+            "id": "selling",
+            "title": "Venta",
+            "items": [
+                "Prospección y captación",
+                "Descubrimiento y cualificación",
+                "Gestión de objeciones",
+                "Cierre",
+                "Atención y fidelización de cuentas"
+            ]
+        },
+        {
+            "id": "tools",
+            "title": "Herramientas",
+            "items": ["HubSpot CRM", "Microsoft Office", "Shopify y WordPress", "Canva", "SAP"]
+        },
+        {
+            "id": "marketing",
+            "title": "Marketing",
+            "items": ["Campañas de email", "Contenido para redes sociales", "SEO", "Creación de marca"]
+        }
+    ],
+    "fr": [
+        {
+            "id": "selling",
+            "title": "Vente",
+            "items": [
+                "Prospection et premier contact",
+                "Découverte et qualification",
+                "Traitement des objections",
+                "Closing",
+                "Suivi et fidélisation des comptes"
+            ]
+        },
+        {
+            "id": "tools",
+            "title": "Outils",
+            "items": ["HubSpot CRM", "Microsoft Office", "Shopify et WordPress", "Canva", "SAP"]
+        },
+        {
+            "id": "marketing",
+            "title": "Marketing",
+            "items": ["Campagnes d'emailing", "Contenu pour les réseaux sociaux", "SEO", "Création de marque"]
+        }
+    ]
+}

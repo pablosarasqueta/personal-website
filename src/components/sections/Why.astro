@@ -1,0 +1,24 @@
+---
+import { getOrderedCollection, getSection } from "../../lib/content";
+import Section from "../ui/Section.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+import Intro from "../ui/Intro.astro";
+
+const reasons = await getOrderedCollection("why", Astro.currentLocale);
+const { title, intro } = await getSection(Astro.currentLocale, "why");
+---
+
+<Section id="why" labelledby="why-title" class="border-t border-line">
+    <SectionHeading id="why-title">{title}</SectionHeading>
+    <Intro class="mt-5.5 text-ink-soft">{intro}</Intro>
+    <ul class="mt-11 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-x-12 md:gap-y-10">
+        {reasons.map(({ data }) => (
+            <li class="border-t-2 border-ink pt-4.5">
+                <strong class="block font-display text-[22px] leading-[1.2] font-bold tracking-[-.02em]">
+                    {data.title}
+                </strong>
+                <span class="mt-2.5 block text-[17px] leading-[1.55] text-ink-soft">{data.text}</span>
+            </li>
+        ))}
+    </ul>
+</Section>

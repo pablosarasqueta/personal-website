@@ -1,0 +1,74 @@
+{
+    "title": "Pablo Sarasqueta | Ventas, Dublín",
+    "description": "Pablo Sarasqueta, afincado en Dublín y en busca de un puesto de SDR o BDR. Fundador de Explorandogs y HitDeporte. Representante de ventas certificado por IBM.",
+    "ogDescription": "Monté mi primera empresa con quince años. La segunda me enseñó a vender.",
+    "sections": {
+        "header": {
+            "name": "Pablo Sarasqueta",
+            "navLabel": "Contacto",
+            "email": "Email",
+            "linkedin": "LinkedIn",
+            "cv": "CV",
+            "languageLabel": "Idioma"
+        },
+        "hero": {
+            "titleLead": "Monté mi primera empresa con quince años.",
+            "titleAccent": "La segunda me enseñó a vender.",
+            "intro": "Soy Pablo, vivo en Dublín y busco un puesto de SDR o BDR. Aquí abajo está el negocio que levanté desde cero: encontré a los clientes, les vendí un viaje y los cuidé hasta que volvieron a casa.",
+            "email": "Escríbeme",
+            "cv": "Descarga mi CV (PDF)",
+            "factsLabel": "Resumen"
+        },
+        "explorandogs": {
+            "title": "Explorandogs",
+            "meta": "Fundador, 2023–2024",
+            "intro": [
+                "Una agencia de viajes para gente en España que quería llevarse a sus mascotas de vacaciones por Europa y no encontraba a nadie que se lo organizara.",
+                "No había equipo, ni presupuesto, ni lista de clientes. Cada reserva pasaba por las mismas siete paradas, y yo me encargaba de todas."
+            ],
+            "routeLabel": "Cómo se cerraba una reserva",
+            "guide": {
+                "title": "Un cliente, una ciudad, 22 páginas.",
+                "text": "Cada cliente recibía una guía escrita para su propio viaje. Esta es la de Roma: restaurantes que admiten mascotas, transporte, excursiones, los veterinarios más cercanos y consejos prácticos para viajar con perro.",
+                "link": "Abrir la guía de Roma (PDF)",
+                "cardBrand": "Explorandogs",
+                "cardPages": "22 págs.",
+                "cardTitle": "Guía de viaje",
+                "cardCity": "Roma",
+                "cardFooter": "Escrita para un cliente y su perro"
+            },
+            "closingLead": "El resto del trabajo.",
+            "closing": "Levantar el negocio también significaba hacer todo lo que rodea a la venta: la web en Shopify y su SEO, la marca y las redes sociales, y los números detrás de cada viaje."
+        },
+        "hitDeporte": {
+            "title": "HitDeporte",
+            "age": "15",
+            "ageCaption": "Los años que tenía cuando lo empecé, en 2015",
+            "intro": [
+                "Una web de noticias deportivas que empecé con quince años, sobre fútbol español, fútbol internacional y otros deportes. Consiguió lectores fieles en España y sumó lectores de todo el mundo.",
+                "No podía escribirlo todo yo solo, así que recluté a estudiantes de periodismo para que se unieran. Visto ahora, ese fue mi primer trabajo de ventas: convencer a gente mayor que yo de dedicar su tiempo a un proyecto dirigido por un adolescente."
+            ]
+        },
+        "why": {
+            "title": "Por qué creo que se me daría bien",
+            "intro": "Seis cosas que aportaría a un equipo de ventas, y de dónde sale cada una."
+        },
+        "experience": {
+            "title": "Experiencia",
+            "columns": { "role": "Puesto", "company": "Empresa", "dates": "Fechas" },
+            "ownBadge": "Mi empresa"
+        },
+        "education": { "title": "Formación y certificación" },
+        "languages": { "title": "Idiomas" },
+        "skills": { "title": "Habilidades y herramientas" },
+        "contact": {
+            "title": "Si te estuviera prospectando, aquí es donde te pediría quince minutos.",
+            "intro": "Así que te los pido. Si buscas SDR o BDR en Dublín, para mercados de habla inglesa o hispana, me encantaría saber más del puesto.",
+            "email": "Escríbeme",
+            "linkedin": "Escríbeme por LinkedIn",
+            "cv": "Descarga mi CV",
+            "footer": "Pablo Sarasqueta, Dublín",
+            "backToTop": "Volver arriba"
+        }
+    }
+}

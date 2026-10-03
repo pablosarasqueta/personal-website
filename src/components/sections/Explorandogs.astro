@@ -1,0 +1,117 @@
+---
+import { getOrderedCollection, getSection } from "../../lib/content";
+import Section from "../ui/Section.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+import Intro from "../ui/Intro.astro";
+import TextLink from "../ui/TextLink.astro";
+
+const stops = await getOrderedCollection("stops", Astro.currentLocale);
+const copy = await getSection(Astro.currentLocale, "explorandogs");
+const { guide } = copy;
+---
+
+<Section id="explorandogs" labelledby="explore-title" class="bg-paper-2 print:bg-white print:text-black">
+    <div class="grid grid-cols-1 items-start gap-[clamp(32px,6vw,80px)] md:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)]">
+        <div>
+            <SectionHeading id="explore-title">{copy.title}</SectionHeading>
+            <p class="mt-3.5 font-display text-[15px] text-muted">{copy.meta}</p>
+        </div>
+        <div class="space-y-4 text-ink-soft">
+            {copy.intro.map(text => (
+                <Intro>{text}</Intro>
+            ))}
+        </div>
+    </div>
+
+    <div class="relative mt-[clamp(56px,7vw,88px)]">
+        <span
+            data-route-fill
+            aria-hidden="true"
+            class="absolute top-5 bottom-5 left-[19px] z-1 w-[3px] origin-top scale-y-0 rounded-[2px] bg-pine print:hidden"
+        ></span>
+        <ol
+            data-route
+            aria-label={copy.routeLabel}
+            class="relative before:absolute before:top-5 before:bottom-5 before:left-[19px] before:w-[3px] before:rounded-[2px] before:bg-line"
+        >
+            {stops.map(({ data }, i) => (
+                <li
+                    data-stop
+                    class="group relative z-2 grid grid-cols-1 gap-x-12 gap-y-2 pb-11.5 pl-15.5 last:pb-0 md:grid-cols-[minmax(0,300px)_minmax(0,1fr)] md:pl-18"
+                >
+                    <span
+                        data-mark
+                        aria-hidden="true"
+                        class="absolute top-0 left-0 grid size-10.25 place-items-center rounded-full border-3 border-line bg-paper-2 font-display text-[15px] font-bold text-muted transition-[background-color,border-color,color] duration-350 group-data-reached:border-pine group-data-reached:bg-signal group-data-reached:text-ink motion-reduce:transition-none print:bg-white!"
+                    >
+                        {i + 1}
+                    </span>
+                    <div>
+                        <p class="mt-px font-display text-[14px] font-semibold text-pine">{data.tag}</p>
+                        <h3 class="mt-1 text-[clamp(22px,2.3vw,28px)] tracking-[-.025em]">{data.title}</h3>
+                    </div>
+                    <p class="max-w-[58ch] pt-1 text-[17px] text-ink-soft">{data.body}</p>
+                </li>
+            ))}
+        </ol>
+    </div>
+
+    <div class="mt-[clamp(64px,8vw,104px)] grid grid-cols-1 items-center gap-[clamp(32px,6vw,80px)] border-t-2 border-ink pt-[clamp(40px,5vw,64px)] md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+        <div>
+            <h3 class="text-[clamp(28px,3.3vw,40px)] tracking-[-.03em]">{guide.title}</h3>
+            <p class="mt-4 max-w-[56ch] text-ink-soft">{guide.text}</p>
+            <TextLink
+                class="mt-5.5 inline-block"
+                href="/explorandogs-rome-travel-guide.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                {guide.link}
+            </TextLink>
+        </div>
+        <div
+            aria-hidden="true"
+            class="flex aspect-3/4 w-[220px] rotate-[2.5deg] flex-col justify-between justify-self-center rounded-[4px] border border-line bg-white px-6 py-6.5 shadow-[10px_12px_0_var(--color-pine)] md:w-[min(100%,280px)]"
+        >
+            <div class="flex justify-between font-display text-[13px] text-muted">
+                <span>{guide.cardBrand}</span>
+                <span>{guide.cardPages}</span>
+            </div>
+            <div class="font-serif text-[40px] leading-[1.02]">
+                {guide.cardTitle}
+                <i class="block text-[62px] text-pine">{guide.cardCity}</i>
+            </div>
+            <div class="border-t border-line pt-2.5 font-display text-[13px] font-semibold">{guide.cardFooter}</div>
+        </div>
+    </div>
+
+    <p class="mt-[clamp(48px,6vw,72px)] max-w-text text-ink-soft">
+        <strong class="font-semibold text-ink">{copy.closingLead}</strong>
+        {copy.closing}
+    </p>
+</Section>
+
+<script>
+    import { onScrollFrame } from "../../scripts/scroll";
+
+    const route = document.querySelector<HTMLElement>("[data-route]");
+    const fill = document.querySelector<HTMLElement>("[data-route-fill]");
+    const stops = [...document.querySelectorAll<HTMLElement>("[data-stop]")];
+
+    if (route && fill) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            fill.style.scale = "1";
+            stops.forEach(stop => stop.toggleAttribute("data-reached", true));
+        } else {
+            onScrollFrame(() => {
+                const line = window.innerHeight * 0.6;
+                const r = route.getBoundingClientRect();
+                fill.style.scale = `1 ${Math.max(0, Math.min(1, (line - r.top) / r.height))}`;
+                stops.forEach(stop => {
+                    const mark = stop.querySelector("[data-mark]")?.getBoundingClientRect();
+                    stop.toggleAttribute("data-reached", !!mark && mark.top + mark.height / 2 < line);
+                });
+            });
+        }
+    }
+</script>

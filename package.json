@@ -1,0 +1,28 @@
+{
+    "name": "web-pablosarasqueta",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {
+        "@astrojs/node": "^11.1.6",
+        "@astrojs/sitemap": "^3.7.4",
+        "@iconify-json/bi": "^1.2.7",
+        "@tailwindcss/vite": "^4.3.3",
+        "animejs": "^4.5.0",
+        "astro": "^7.3.5",
+        "astro-icon": "^1.2.0",
+        "tailwindcss": "^4.3.3"
+    },
+    "devDependencies": {
+        "prettier": "^3.9.9",
+        "prettier-plugin-astro": "^1.1.0",
+        "prettier-plugin-tailwindcss": "^0.8.1"
+    }
+}

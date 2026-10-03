@@ -1,0 +1,13 @@
+{
+    "title": "Page not found | Pablo Sarasqueta",
+    "description": "The page you were looking for doesn't exist.",
+    "noindex": true,
+    "notFound": {
+        "code": "Error 404",
+        "titleLead": "This page doesn't exist.",
+        "titleAccent": "The rest of the site does.",
+        "intro": "The link may be broken or the page may have moved. Everything about my work, and how to reach me, is on the home page.",
+        "home": "Back to the home page",
+        "email": "Email me"
+    }
+}

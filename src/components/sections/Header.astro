@@ -1,0 +1,46 @@
+---
+import Container from "../ui/Container.astro";
+import LangSwitcher from "../ui/LangSwitcher.astro";
+import { getSection } from "../../lib/content";
+import { CV_URL, EMAIL_URL, LINKEDIN_URL } from "../../lib/seo";
+import { localeHref, toLocale } from "../../lib/i18n";
+
+const copy = await getSection(Astro.currentLocale, "header");
+---
+
+<header
+    id="top"
+    data-header
+    class="sticky top-0 z-20 border-b border-transparent bg-paper/92 backdrop-blur-[10px] transition-[border-color] duration-200 data-scrolled:border-line motion-reduce:transition-none print:hidden"
+>
+    <Container class="flex h-17 items-center justify-between gap-5">
+        <a
+            class="font-display text-[18px] font-bold tracking-[-.01em]"
+            href={`${localeHref(toLocale(Astro.currentLocale))}#top`}
+        >
+            {copy.name}
+        </a>
+        <nav
+            aria-label={copy.navLabel}
+            class="flex gap-4 font-display text-[14px] font-medium sm:gap-6.5 sm:text-[15px]"
+        >
+            <a class="text-muted hover:text-ink" href={EMAIL_URL}>
+                {copy.email}
+            </a>
+            <a class="text-muted hover:text-ink" href={LINKEDIN_URL} target="_blank" rel="noopener">
+                {copy.linkedin}
+            </a>
+            <a class="text-muted hover:text-ink max-sm:hidden" href={CV_URL} download>
+                {copy.cv}
+            </a>
+            <LangSwitcher label={copy.languageLabel} />
+        </nav>
+    </Container>
+</header>
+
+<script>
+    import { onScrollFrame } from "../../scripts/scroll";
+
+    const header = document.querySelector<HTMLElement>("[data-header]");
+    if (header) onScrollFrame(() => header.toggleAttribute("data-scrolled", window.scrollY > 8));
+</script>

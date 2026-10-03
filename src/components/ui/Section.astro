@@ -1,0 +1,23 @@
+---
+import Container from "./Container.astro";
+
+interface Props {
+    id?: string;
+    labelledby: string;
+    tight?: boolean;
+    class?: string;
+    containerClass?: string;
+}
+
+const { id, labelledby, tight = false, class: className, containerClass } = Astro.props;
+---
+
+<section
+    id={id}
+    aria-labelledby={labelledby}
+    class:list={[tight ? "pb-[clamp(72px,9vw,120px)] print:pb-7" : "py-[clamp(72px,9vw,120px)] print:py-7", className]}
+>
+    <Container class={containerClass}>
+        <slot />
+    </Container>
+</section>

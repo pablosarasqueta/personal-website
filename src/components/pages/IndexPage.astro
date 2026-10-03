@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../sections/Header.astro";
+import Hero from "../sections/Hero.astro";
+import Explorandogs from "../sections/Explorandogs.astro";
+import HitDeporte from "../sections/HitDeporte.astro";
+import Why from "../sections/Why.astro";
+import Experience from "../sections/Experience.astro";
+import Education from "../sections/Education.astro";
+import Languages from "../sections/Languages.astro";
+import Skills from "../sections/Skills.astro";
+import Contact from "../sections/Contact.astro";
+import { getPage } from "../../lib/content";
+import { localeAlternates, toLocale } from "../../lib/i18n";
+
+const locale = toLocale(Astro.currentLocale);
+const { title, description, ogDescription } = await getPage(locale, "index");
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    ogDescription={ogDescription}
+    lang={locale}
+    alternates={localeAlternates()}
+>
+    <Header />
+    <main>
+        <Hero />
+        <Explorandogs />
+        <HitDeporte />
+        <Why />
+        <Experience />
+        <Education />
+        <Languages />
+        <Skills />
+    </main>
+    <Contact />
+</BaseLayout>
+
+<script>
+    import { redirectToPreferredLocale } from "../../scripts/lang";
+
+    redirectToPreferredLocale(document.documentElement.lang);
+</script>

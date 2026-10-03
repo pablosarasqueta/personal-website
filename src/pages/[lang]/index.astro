@@ -1,0 +1,10 @@
+---
+import IndexPage from "../../components/pages/IndexPage.astro";
+import { SECONDARY_LOCALES } from "../../lib/i18n";
+
+export function getStaticPaths() {
+    return SECONDARY_LOCALES.map(lang => ({ params: { lang } }));
+}
+---
+
+<IndexPage />

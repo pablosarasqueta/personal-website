@@ -1,0 +1,57 @@
+---
+import { getOrderedCollection, getSection } from "../../lib/content";
+import Section from "../ui/Section.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+
+const jobs = await getOrderedCollection("jobs", Astro.currentLocale);
+const { title, columns, ownBadge } = await getSection(Astro.currentLocale, "experience");
+const cell = "align-baseline sm:border-b sm:border-line sm:py-4 sm:group-first:border-t-2 sm:group-first:border-ink";
+---
+
+<Section id="experience" labelledby="exp-title" tight>
+    <SectionHeading id="exp-title">{title}</SectionHeading>
+    <table class="mt-10 w-full text-[17px] max-sm:block">
+        <thead class="sr-only">
+            <tr>
+                <th scope="col">{columns.role}</th>
+                <th scope="col">{columns.company}</th>
+                <th scope="col">{columns.dates}</th>
+            </tr>
+        </thead>
+        <tbody class="max-sm:block">
+            {jobs.map(({ data }) => (
+                <tr class="group max-sm:grid max-sm:grid-cols-[1fr_auto] max-sm:border-b max-sm:border-line max-sm:py-3.5 max-sm:first:border-t-2 max-sm:first:border-ink">
+                    <td
+                        class:list={[
+                            cell,
+                            "font-display text-[18px] font-semibold max-sm:col-start-1 sm:w-[34%] sm:pr-5",
+                        ]}
+                    >
+                        {data.role}
+                        {data.own && (
+                            <span class="ml-2.5 inline-block rounded-[3px] bg-signal px-[7px] py-0.5 align-[2px] text-[12px] font-semibold text-ink">
+                                {ownBadge}
+                            </span>
+                        )}
+                    </td>
+                    <td
+                        class:list={[
+                            cell,
+                            "text-ink-soft max-sm:col-span-full max-sm:mt-0.5 max-sm:text-[16px] sm:pr-5",
+                        ]}
+                    >
+                        {data.company}
+                    </td>
+                    <td
+                        class:list={[
+                            cell,
+                            "text-right font-display text-[15px] whitespace-nowrap text-muted max-sm:col-start-2 max-sm:row-start-1",
+                        ]}
+                    >
+                        {data.dates}
+                    </td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
+</Section>

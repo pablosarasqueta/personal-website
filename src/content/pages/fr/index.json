@@ -1,0 +1,74 @@
+{
+    "title": "Pablo Sarasqueta | Vente, Dublin",
+    "description": "Pablo Sarasqueta, basé à Dublin, à la recherche d'un poste de SDR ou BDR. Fondateur d'Explorandogs et de HitDeporte. Commercial certifié par IBM.",
+    "ogDescription": "J'ai créé ma première entreprise à quinze ans. La deuxième m'a appris à vendre.",
+    "sections": {
+        "header": {
+            "name": "Pablo Sarasqueta",
+            "navLabel": "Contact",
+            "email": "Email",
+            "linkedin": "LinkedIn",
+            "cv": "CV",
+            "languageLabel": "Langue"
+        },
+        "hero": {
+            "titleLead": "J'ai créé ma première entreprise à quinze ans.",
+            "titleAccent": "La deuxième m'a appris à vendre.",
+            "intro": "Je m'appelle Pablo, je vis à Dublin et je cherche un poste de SDR ou BDR. Vous trouverez ci-dessous l'entreprise que j'ai bâtie à partir de rien : j'ai trouvé les clients, je leur ai vendu un voyage et je me suis occupé d'eux jusqu'à leur retour.",
+            "email": "Écrivez-moi",
+            "cv": "Télécharger mon CV (PDF)",
+            "factsLabel": "En bref"
+        },
+        "explorandogs": {
+            "title": "Explorandogs",
+            "meta": "Fondateur, 2023–2024",
+            "intro": [
+                "Une agence de voyages pour les personnes en Espagne qui voulaient partir en vacances en Europe avec leurs animaux et ne trouvaient personne pour l'organiser.",
+                "Pas d'équipe, pas de budget, pas de fichier clients. Chaque réservation passait par les mêmes sept étapes, et je les gérais toutes."
+            ],
+            "routeLabel": "Comment se déroulait une réservation",
+            "guide": {
+                "title": "Un client, une ville, 22 pages.",
+                "text": "Chaque client recevait un guide écrit pour son propre voyage. Celui-ci est pour Rome : restaurants qui acceptent les animaux, transports, excursions, vétérinaires les plus proches et conseils pratiques pour voyager avec un chien.",
+                "link": "Ouvrir le guide de Rome (PDF)",
+                "cardBrand": "Explorandogs",
+                "cardPages": "22 p.",
+                "cardTitle": "Guía de viaje",
+                "cardCity": "Roma",
+                "cardFooter": "Écrit pour un client et son chien"
+            },
+            "closingLead": "Le reste du travail.",
+            "closing": "Construire l'entreprise voulait aussi dire tout faire autour de la vente : le site Shopify et son référencement, la marque et les réseaux sociaux, et les chiffres derrière chaque voyage."
+        },
+        "hitDeporte": {
+            "title": "HitDeporte",
+            "age": "15",
+            "ageCaption": "Mon âge quand je l'ai lancé, en 2015",
+            "intro": [
+                "Un site espagnol d'actualité sportive que j'ai lancé à quinze ans, consacré au football espagnol, au football international et à d'autres sports. Il a fidélisé un lectorat en Espagne et attiré des lecteurs du monde entier.",
+                "Je ne pouvais pas tout écrire seul, alors j'ai recruté des étudiants en journalisme. Avec le recul, c'était mon premier travail de vente : convaincre des gens plus âgés que moi de consacrer leur temps à un projet mené par un adolescent."
+            ]
+        },
+        "why": {
+            "title": "Pourquoi je pense être fait pour ce métier",
+            "intro": "Six choses que j'apporterais à une équipe commerciale, et d'où vient chacune d'elles."
+        },
+        "experience": {
+            "title": "Expérience",
+            "columns": { "role": "Poste", "company": "Entreprise", "dates": "Dates" },
+            "ownBadge": "Mon entreprise"
+        },
+        "education": { "title": "Formation et certification" },
+        "languages": { "title": "Langues" },
+        "skills": { "title": "Compétences et outils" },
+        "contact": {
+            "title": "Si je vous prospectais, c'est ici que je vous demanderais quinze minutes.",
+            "intro": "Alors je vous les demande. Si vous recrutez des SDR ou BDR à Dublin, pour des marchés anglophones ou hispanophones, j'aimerais en savoir plus sur le poste.",
+            "email": "Écrivez-moi",
+            "linkedin": "Contactez-moi sur LinkedIn",
+            "cv": "Télécharger mon CV",
+            "footer": "Pablo Sarasqueta, Dublin",
+            "backToTop": "Retour en haut"
+        }
+    }
+}

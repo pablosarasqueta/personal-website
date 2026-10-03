@@ -1,0 +1,26 @@
+{
+    "en": [
+        { "id": "based-in", "label": "Based in", "value": "Dublin, Ireland" },
+        { "id": "looking-for", "label": "Looking for", "value": "SDR or BDR roles" },
+        { "id": "sales", "label": "Sales", "value": "Full cycle, from prospecting to retention" },
+        { "id": "certified", "label": "Certified", "value": "IBM Sales Representative Professional Certificate" },
+        { "id": "crm", "label": "CRM", "value": "HubSpot" },
+        { "id": "languages", "label": "Languages", "value": "Spanish and Basque (native), English and French (B2)" }
+    ],
+    "es": [
+        { "id": "based-in", "label": "Vivo en", "value": "Dublín, Irlanda" },
+        { "id": "looking-for", "label": "Busco", "value": "Puestos de SDR o BDR" },
+        { "id": "sales", "label": "Ventas", "value": "Ciclo completo, de la prospección a la fidelización" },
+        { "id": "certified", "label": "Certificado", "value": "IBM Sales Representative Professional Certificate" },
+        { "id": "crm", "label": "CRM", "value": "HubSpot" },
+        { "id": "languages", "label": "Idiomas", "value": "Español y euskera (nativo), inglés y francés (B2)" }
+    ],
+    "fr": [
+        { "id": "based-in", "label": "Basé à", "value": "Dublin, Irlande" },
+        { "id": "looking-for", "label": "Je cherche", "value": "Un poste de SDR ou BDR" },
+        { "id": "sales", "label": "Vente", "value": "Cycle complet, de la prospection à la fidélisation" },
+        { "id": "certified", "label": "Certifié", "value": "IBM Sales Representative Professional Certificate" },
+        { "id": "crm", "label": "CRM", "value": "HubSpot" },
+        { "id": "languages", "label": "Langues", "value": "Espagnol et basque (natif), anglais et français (B2)" }
+    ]
+}

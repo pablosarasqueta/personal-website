@@ -1,0 +1,62 @@
+{
+    "en": [
+        {
+            "id": "ibm",
+            "title": "IBM Sales Representative Professional Certificate",
+            "meta": "IBM, completed 2026",
+            "description": "Six courses: prospecting and client engagement, presentations and objection handling, negotiation and closing, account success, AI for sales, and a final capstone project."
+        },
+        {
+            "id": "foro-europeo",
+            "title": "Foro Europeo Business School of Navarre",
+            "meta": "2020 – 2023",
+            "description": "Administration and Finance, and Marketing and Publicity. Both programmes taught with French."
+        },
+        {
+            "id": "hec-paris",
+            "title": "HEC Paris",
+            "meta": "Course",
+            "description": "Investment Management in an Evolving and Volatile World."
+        }
+    ],
+    "es": [
+        {
+            "id": "ibm",
+            "title": "IBM Sales Representative Professional Certificate",
+            "meta": "IBM, completado en 2026",
+            "description": "Seis cursos: prospección y relación con clientes, presentaciones y gestión de objeciones, negociación y cierre, éxito de cuentas, IA para ventas y un proyecto final."
+        },
+        {
+            "id": "foro-europeo",
+            "title": "Foro Europeo Escuela de Negocios de Navarra",
+            "meta": "2020 – 2023",
+            "description": "Administración y Finanzas, y Marketing y Publicidad. Ambos programas impartidos con francés."
+        },
+        {
+            "id": "hec-paris",
+            "title": "HEC Paris",
+            "meta": "Curso",
+            "description": "Investment Management in an Evolving and Volatile World."
+        }
+    ],
+    "fr": [
+        {
+            "id": "ibm",
+            "title": "IBM Sales Representative Professional Certificate",
+            "meta": "IBM, obtenu en 2026",
+            "description": "Six cours : prospection et relation client, présentations et traitement des objections, négociation et closing, réussite des comptes, IA pour la vente et un projet final."
+        },
+        {
+            "id": "foro-europeo",
+            "title": "Foro Europeo, école de commerce de Navarre",
+            "meta": "2020 – 2023",
+            "description": "Administration et finance, et marketing et publicité. Les deux formations dispensées avec le français."
+        },
+        {
+            "id": "hec-paris",
+            "title": "HEC Paris",
+            "meta": "Cours",
+            "description": "Investment Management in an Evolving and Volatile World."
+        }
+    ]
+}

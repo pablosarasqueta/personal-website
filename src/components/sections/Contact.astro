@@ -1,0 +1,40 @@
+---
+import Container from "../ui/Container.astro";
+import Intro from "../ui/Intro.astro";
+import Button from "../ui/Button.astro";
+import TextLink from "../ui/TextLink.astro";
+import { getSection } from "../../lib/content";
+import { CV_URL, EMAIL_ROLE_URL, LINKEDIN_URL } from "../../lib/seo";
+
+const copy = await getSection(Astro.currentLocale, "contact");
+---
+
+<section
+    id="contact"
+    aria-labelledby="contact-title"
+    class="bg-pine-deep pt-[clamp(80px,10vw,136px)] pb-12 text-white print:bg-white print:text-black"
+>
+    <Container>
+        <h2 id="contact-title" class="max-w-[16ch] text-[clamp(36px,5.6vw,72px)] leading-none tracking-[-.04em]">
+            {copy.title}
+        </h2>
+        <Intro class="mt-5.5 text-mist print:text-black">{copy.intro}</Intro>
+        <div class="mt-10 flex flex-wrap items-center gap-x-6.5 gap-y-3.5 print:hidden">
+            <Button href={EMAIL_ROLE_URL} tone="dark">
+                {copy.email}
+            </Button>
+            <TextLink href={LINKEDIN_URL} target="_blank" rel="noopener" tone="dark">
+                {copy.linkedin}
+            </TextLink>
+            <TextLink href={CV_URL} download tone="dark">
+                {copy.cv}
+            </TextLink>
+        </div>
+        <div class="mt-[clamp(72px,9vw,120px)] flex flex-col justify-between gap-4 border-t border-white/18 pt-5.5 font-display text-[14px] text-sage sm:flex-row">
+            <span>{copy.footer}</span>
+            <a class="hover:text-white" href="#top">
+                {copy.backToTop}
+            </a>
+        </div>
+    </Container>
+</section>

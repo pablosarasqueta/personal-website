@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+    --color-paper: #f3f5f4;
+    --color-paper-2: #e6ece9;
+    --color-ink: #17242a;
+    --color-ink-soft: #2f3e44;
+    --color-muted: #56656b;
+    --color-pine: #1f5c4a;
+    --color-pine-deep: #163f34;
+    --color-signal: #f0b429;
+    --color-line: #cfd8d4;
+    --color-mist: #c9dad3;
+    --color-sage: #9fbdb2;
+
+    --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+    --container-page: 1120px;
+    --container-text: 68ch;
+
+    --breakpoint-sm: 601px;
+    --breakpoint-md: 901px;
+}
+
+:root {
+    --bg-primary: var(--color-paper);
+    --text-color: var(--color-ink);
+}
+
+@layer base {
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid var(--color-signal);
+        outline-offset: 3px;
+        border-radius: 2px;
+    }
+
+    section {
+        scroll-margin-top: 80px;
+    }
+}
+
+/* astro-icon renders inline SVGs; keep them aligned with the text baseline. */
+svg[data-icon] {
+    display: inline-block;
+    vertical-align: -0.125em;
+}

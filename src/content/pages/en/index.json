@@ -1,0 +1,74 @@
+{
+    "title": "Pablo Sarasqueta | Sales, Dublin",
+    "description": "Pablo Sarasqueta, based in Dublin and looking for an SDR or BDR role. Founder of Explorandogs and HitDeporte. IBM-certified sales representative.",
+    "ogDescription": "I started my first company at fifteen. The second one taught me how to sell.",
+    "sections": {
+        "header": {
+            "name": "Pablo Sarasqueta",
+            "navLabel": "Contact",
+            "email": "Email",
+            "linkedin": "LinkedIn",
+            "cv": "CV",
+            "languageLabel": "Language"
+        },
+        "hero": {
+            "titleLead": "I started my first company at fifteen.",
+            "titleAccent": "The second one taught me how to sell.",
+            "intro": "I'm Pablo, I live in Dublin, and I'm looking for an SDR or BDR role. Below is the business I built from nothing: I found the customers, sold them a trip, and looked after them until they were home.",
+            "email": "Email me",
+            "cv": "Download my CV (PDF)",
+            "factsLabel": "Summary"
+        },
+        "explorandogs": {
+            "title": "Explorandogs",
+            "meta": "Founder, 2023–2024",
+            "intro": [
+                "A travel agency for people in Spain who wanted to take their pets on holiday around Europe, and couldn't find anyone to organise it.",
+                "There was no team, no budget and no customer list. Every booking went through the same seven stops, and I ran all of them."
+            ],
+            "routeLabel": "How a booking happened",
+            "guide": {
+                "title": "One client, one city, 22 pages.",
+                "text": "Every client got a guide written for their own trip. This one is for Rome: pet-friendly restaurants, transport, day trips, the nearest vets and practical tips for travelling with a dog.",
+                "link": "Open the Rome guide (PDF)",
+                "cardBrand": "Explorandogs",
+                "cardPages": "22 pp.",
+                "cardTitle": "Guía de viaje",
+                "cardCity": "Roma",
+                "cardFooter": "Written for one client and their dog"
+            },
+            "closingLead": "The rest of the job.",
+            "closing": "Building the business meant doing everything around the sale as well: the Shopify website and its SEO, the brand and the social channels, and the numbers behind every trip."
+        },
+        "hitDeporte": {
+            "title": "HitDeporte",
+            "age": "15",
+            "ageCaption": "My age when I started it, in 2015",
+            "intro": [
+                "A Spanish sports news site I started at fifteen, covering Spanish football, international football and other sports. It built a loyal readership in Spain and picked up readers around the world.",
+                "I couldn't write it all myself, so I recruited journalism students to join. Looking back, that was my first sales job: convincing people older than me to give their time to a project run by a teenager."
+            ]
+        },
+        "why": {
+            "title": "Why I think I'd be good at this",
+            "intro": "Six things I'd bring to a sales team, and where each one comes from."
+        },
+        "experience": {
+            "title": "Experience",
+            "columns": { "role": "Role", "company": "Company", "dates": "Dates" },
+            "ownBadge": "My company"
+        },
+        "education": { "title": "Education and certification" },
+        "languages": { "title": "Languages" },
+        "skills": { "title": "Skills and tools" },
+        "contact": {
+            "title": "If I were prospecting you, this is where I'd ask for fifteen minutes.",
+            "intro": "So I'm asking. If you're hiring SDRs or BDRs in Dublin, for English or Spanish-speaking markets, I'd like to hear about the role.",
+            "email": "Email me",
+            "linkedin": "Message me on LinkedIn",
+            "cv": "Download my CV",
+            "footer": "Pablo Sarasqueta, Dublin",
+            "backToTop": "Back to top"
+        }
+    }
+}

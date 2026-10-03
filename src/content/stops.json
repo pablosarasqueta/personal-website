@@ -1,0 +1,134 @@
+{
+    "en": [
+        {
+            "id": "prospecting",
+            "tag": "Prospecting",
+            "title": "Find the right people",
+            "body": "Researched pet owners who travel, built a contact list from scratch and worked out where they spent their time online."
+        },
+        {
+            "id": "outreach",
+            "tag": "Outreach",
+            "title": "Start the conversation",
+            "body": "Email campaigns, follow-ups and social content to turn strangers into enquiries. Targeted campaigns lifted email conversion by 50%."
+        },
+        {
+            "id": "discovery",
+            "tag": "Discovery",
+            "title": "Understand the trip",
+            "body": "Every conversation started with questions: where, when, what kind of pet, and what worried them. The answers decided the trip."
+        },
+        {
+            "id": "proposal",
+            "tag": "Proposal",
+            "title": "Make the case",
+            "body": "A plan and a price for each client, built around what they had told me rather than a standard package."
+        },
+        {
+            "id": "closing",
+            "tag": "Closing",
+            "title": "Get to yes",
+            "body": "Answered doubts about price and logistics and followed up until they decided. Every lead lived in HubSpot, from first contact to booking."
+        },
+        {
+            "id": "customer-care",
+            "tag": "Customer care",
+            "title": "Be there on the road",
+            "body": "Clients could reach me while they were away. When something went wrong abroad, I sorted it out in real time."
+        },
+        {
+            "id": "retention",
+            "tag": "Retention",
+            "title": "Bring them back",
+            "body": "After each trip I checked in to hear how it went. Looking after people once they've paid is how the next booking starts."
+        }
+    ],
+    "es": [
+        {
+            "id": "prospecting",
+            "tag": "Prospección",
+            "title": "Encontrar a la gente adecuada",
+            "body": "Investigué a dueños de mascotas que viajan, monté una lista de contactos desde cero y averigüé dónde pasaban su tiempo en internet."
+        },
+        {
+            "id": "outreach",
+            "tag": "Captación",
+            "title": "Empezar la conversación",
+            "body": "Campañas de email, seguimientos y contenido en redes para convertir a desconocidos en consultas. Las campañas segmentadas subieron la conversión del email un 50%."
+        },
+        {
+            "id": "discovery",
+            "tag": "Descubrimiento",
+            "title": "Entender el viaje",
+            "body": "Cada conversación empezaba con preguntas: adónde, cuándo, qué tipo de mascota y qué les preocupaba. Las respuestas decidían el viaje."
+        },
+        {
+            "id": "proposal",
+            "tag": "Propuesta",
+            "title": "Defender la propuesta",
+            "body": "Un plan y un precio para cada cliente, construidos a partir de lo que me habían contado y no de un paquete estándar."
+        },
+        {
+            "id": "closing",
+            "tag": "Cierre",
+            "title": "Llegar al sí",
+            "body": "Resolví dudas sobre precio y logística e hice seguimiento hasta que se decidían. Cada lead vivía en HubSpot, del primer contacto a la reserva."
+        },
+        {
+            "id": "customer-care",
+            "tag": "Atención al cliente",
+            "title": "Estar ahí durante el viaje",
+            "body": "Los clientes podían contactarme mientras estaban fuera. Cuando algo salía mal en el extranjero, lo resolvía en tiempo real."
+        },
+        {
+            "id": "retention",
+            "tag": "Fidelización",
+            "title": "Hacer que vuelvan",
+            "body": "Después de cada viaje les escribía para saber qué tal había ido. Cuidar a la gente cuando ya ha pagado es como empieza la siguiente reserva."
+        }
+    ],
+    "fr": [
+        {
+            "id": "prospecting",
+            "tag": "Prospection",
+            "title": "Trouver les bonnes personnes",
+            "body": "J'ai étudié les propriétaires d'animaux qui voyagent, constitué un fichier de contacts à partir de rien et repéré où ils passaient leur temps en ligne."
+        },
+        {
+            "id": "outreach",
+            "tag": "Premier contact",
+            "title": "Engager la conversation",
+            "body": "Campagnes d'emailing, relances et contenus sur les réseaux pour transformer des inconnus en demandes. Les campagnes ciblées ont augmenté la conversion des emails de 50 %."
+        },
+        {
+            "id": "discovery",
+            "tag": "Découverte",
+            "title": "Comprendre le voyage",
+            "body": "Chaque conversation commençait par des questions : où, quand, quel animal et ce qui les inquiétait. Les réponses décidaient du voyage."
+        },
+        {
+            "id": "proposal",
+            "tag": "Proposition",
+            "title": "Défendre la proposition",
+            "body": "Un programme et un prix pour chaque client, construits à partir de ce qu'il m'avait dit plutôt que d'une formule standard."
+        },
+        {
+            "id": "closing",
+            "tag": "Closing",
+            "title": "Obtenir le oui",
+            "body": "J'ai levé les doutes sur le prix et la logistique et relancé jusqu'à la décision. Chaque lead était suivi dans HubSpot, du premier contact à la réservation."
+        },
+        {
+            "id": "customer-care",
+            "tag": "Service client",
+            "title": "Être là pendant le voyage",
+            "body": "Les clients pouvaient me joindre pendant leur séjour. Quand quelque chose se passait mal à l'étranger, je le réglais en temps réel."
+        },
+        {
+            "id": "retention",
+            "tag": "Fidélisation",
+            "title": "Les faire revenir",
+            "body": "Après chaque voyage, je prenais des nouvelles pour savoir comment ça s'était passé. Prendre soin des gens une fois qu'ils ont payé, c'est comme ça que commence la réservation suivante."
+        }
+    ]
+}

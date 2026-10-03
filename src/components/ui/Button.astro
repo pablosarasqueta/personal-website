@@ -1,0 +1,18 @@
+---
+interface Props {
+    href: string;
+    tone?: "light" | "dark";
+}
+
+const { href, tone = "light" } = Astro.props;
+---
+
+<a
+    href={href}
+    class:list={[
+        "inline-block rounded-md px-5.5 py-3.5 font-display text-[16px] font-semibold transition-[background-color] duration-200 motion-reduce:transition-none",
+        tone === "light" ? "bg-ink text-white hover:bg-pine" : "bg-signal text-ink hover:bg-white",
+    ]}
+>
+    <slot />
+</a>

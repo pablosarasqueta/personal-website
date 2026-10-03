@@ -1,0 +1,21 @@
+---
+import { getOrderedCollection, getSection } from "../../lib/content";
+import Section from "../ui/Section.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+
+const education = await getOrderedCollection("education", Astro.currentLocale);
+const { title } = await getSection(Astro.currentLocale, "education");
+---
+
+<Section id="education" labelledby="edu-title" tight>
+    <SectionHeading id="edu-title">{title}</SectionHeading>
+    <div class="mt-10 grid grid-cols-1 gap-7 md:grid-cols-3 md:gap-10">
+        {education.map(({ data }) => (
+            <article class="border-t-2 border-ink pt-4.5">
+                <h3 class="text-[21px] leading-[1.2]">{data.title}</h3>
+                <p class="mt-2 font-display text-[14px] font-semibold text-pine">{data.meta}</p>
+                <p class="mt-2.5 text-[16px] text-ink-soft">{data.description}</p>
+            </article>
+        ))}
+    </div>
+</Section>
