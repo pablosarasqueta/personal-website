@@ -10,11 +10,22 @@ import Education from "../sections/Education.astro";
 import Languages from "../sections/Languages.astro";
 import Skills from "../sections/Skills.astro";
 import Contact from "../sections/Contact.astro";
-import { getPage } from "../../lib/content";
+import { getOrderedCollection, getPage } from "../../lib/content";
 import { localeAlternates, toLocale } from "../../lib/i18n";
+import { profilePageSchema } from "../../lib/seo";
 
 const locale = toLocale(Astro.currentLocale);
-const { title, description, ogDescription } = await getPage(locale, "index");
+const { title, description, ogDescription, jobTitle } = await getPage(locale, "index");
+const skills = await getOrderedCollection("skills", locale);
+
+const jsonLd = profilePageSchema({
+    url: new URL(Astro.url.pathname, Astro.site).href,
+    lang: locale,
+    title,
+    description,
+    jobTitle: jobTitle ?? title,
+    knowsAbout: skills.flatMap(({ data }) => data.items),
+});
 ---
 
 <BaseLayout
@@ -23,6 +34,7 @@ const { title, description, ogDescription } = await getPage(locale, "index");
     ogDescription={ogDescription}
     lang={locale}
     alternates={localeAlternates()}
+    jsonLd={jsonLd}
 >
     <Header />
     <main>

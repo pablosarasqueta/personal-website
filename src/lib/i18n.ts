@@ -20,3 +20,9 @@ export const localeAlternates = (): { hreflang: string; href: string }[] => [
     ...LOCALES.map(locale => ({ hreflang: locale, href: localeHref(locale) })),
     { hreflang: "x-default", href: localeHref(DEFAULT_LOCALE) },
 ];
+
+export const OG_LOCALES: Record<Locale, string> = {
+    en: "en_IE",
+    es: "es_ES",
+    fr: "fr_FR",
+};

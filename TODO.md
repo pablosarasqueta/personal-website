@@ -9,7 +9,6 @@ Pending setup tasks for this fresh template. Delete each line once done.
 
 ## Code
 
-- [ ] Flesh out the SEO helpers (`src/lib/seo.ts`).
 
 ## Client scripts (when you need them)
 

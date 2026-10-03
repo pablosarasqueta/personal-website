@@ -1,4 +1,4 @@
-import { isLocale, localeHref } from "../lib/i18n";
+import { DEFAULT_LOCALE, isLocale, localeHref } from "../lib/i18n";
 
 const STORAGE_KEY = "pablosarasqueta-lang";
 
@@ -18,7 +18,7 @@ export const rememberLocale = (locale: string): void => {
 };
 
 export const redirectToPreferredLocale = (currentLocale: string): void => {
-    if (storedLocale()) return;
+    if (currentLocale !== DEFAULT_LOCALE || storedLocale()) return;
     const detected = (navigator.languages ?? [navigator.language]).map(l => l.slice(0, 2).toLowerCase()).find(isLocale);
     if (!detected || detected === currentLocale) return;
     window.location.replace(localeHref(detected));

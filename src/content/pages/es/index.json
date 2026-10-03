@@ -1,6 +1,7 @@
 {
-    "title": "Pablo Sarasqueta | Ventas, Dublín",
-    "description": "Pablo Sarasqueta, afincado en Dublín y en busca de un puesto de SDR o BDR. Fundador de Explorandogs y HitDeporte. Representante de ventas certificado por IBM.",
+    "title": "Pablo Sarasqueta | SDR / BDR con español nativo en Dublín",
+    "description": "Comercial nativo en español en Dublín, busco puesto de SDR o BDR. Dos negocios fundados, certificado de ventas de IBM, HubSpot. Español, euskera, inglés y francés.",
+    "jobTitle": "Comercial nativo en español (SDR / BDR)",
     "ogDescription": "Monté mi primera empresa con quince años. La segunda me enseñó a vender.",
     "sections": {
         "header": {
@@ -15,7 +16,7 @@
         "hero": {
             "titleLead": "Monté mi primera empresa con quince años.",
             "titleAccent": "La segunda me enseñó a vender.",
-            "intro": "Soy Pablo, vivo en Dublín y busco un puesto de SDR o BDR. Aquí abajo está el negocio que levanté desde cero: encontré a los clientes, les vendí un viaje y los cuidé hasta que volvieron a casa.",
+            "intro": "Soy Pablo, vivo en Dublín y busco un puesto de SDR o BDR (Sales Development o Business Development Representative). Aquí abajo está el negocio que levanté desde cero: encontré a los clientes, les vendí un viaje y los cuidé hasta que volvieron a casa.",
             "email": "Escríbeme",
             "cv": "Descarga mi CV (PDF)",
             "factsLabel": "Resumen"

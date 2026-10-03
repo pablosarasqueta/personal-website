@@ -1,7 +1,8 @@
 ---
 // Base layout: shared <head> (SEO, Open Graph, JSON-LD) and <body> shell.
 // TODO: add your global chrome here (nav, theme toggle, footer...) as the project grows.
-import { THEME_COLOR } from "../lib/seo";
+import { OG_IMAGE, SITE_NAME, THEME_COLOR } from "../lib/seo";
+import { OG_LOCALES, toLocale } from "../lib/i18n";
 import { THEME_STORAGE_KEY } from "../scripts/theme";
 
 interface Props {
@@ -22,7 +23,7 @@ const {
     ogDescription = description,
     lang = "en",
     alternates = [],
-    ogImage = "/imgs/favicon/og-image.png",
+    ogImage = OG_IMAGE,
     ogType = "website",
     noindex = false,
     jsonLd,
@@ -56,6 +57,8 @@ const ogImageURL = ogImage && new URL(ogImage, Astro.site);
         ))}
 
         <meta property="og:type" content={ogType} />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:locale" content={OG_LOCALES[toLocale(lang)]} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={ogDescription} />
         <meta property="og:url" content={canonicalURL} />

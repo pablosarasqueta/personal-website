@@ -1,6 +1,7 @@
 {
-    "title": "Pablo Sarasqueta | Vente, Dublin",
-    "description": "Pablo Sarasqueta, basé à Dublin, à la recherche d'un poste de SDR ou BDR. Fondateur d'Explorandogs et de HitDeporte. Commercial certifié par IBM.",
+    "title": "Pablo Sarasqueta | SDR / BDR hispanophone à Dublin",
+    "description": "Commercial hispanophone natif à Dublin, à la recherche d'un poste de SDR ou BDR. Deux entreprises fondées, certificat de vente IBM, HubSpot. Espagnol, basque, anglais, français.",
+    "jobTitle": "Commercial hispanophone (SDR / BDR)",
     "ogDescription": "J'ai créé ma première entreprise à quinze ans. La deuxième m'a appris à vendre.",
     "sections": {
         "header": {
@@ -15,7 +16,7 @@
         "hero": {
             "titleLead": "J'ai créé ma première entreprise à quinze ans.",
             "titleAccent": "La deuxième m'a appris à vendre.",
-            "intro": "Je m'appelle Pablo, je vis à Dublin et je cherche un poste de SDR ou BDR. Vous trouverez ci-dessous l'entreprise que j'ai bâtie à partir de rien : j'ai trouvé les clients, je leur ai vendu un voyage et je me suis occupé d'eux jusqu'à leur retour.",
+            "intro": "Je m'appelle Pablo, hispanophone natif, je vis à Dublin et je cherche un poste de SDR ou BDR (Sales Development ou Business Development Representative). Vous trouverez ci-dessous l'entreprise que j'ai bâtie à partir de rien : j'ai trouvé les clients, je leur ai vendu un voyage et je me suis occupé d'eux jusqu'à leur retour.",
             "email": "Écrivez-moi",
             "cv": "Télécharger mon CV (PDF)",
             "factsLabel": "En bref"

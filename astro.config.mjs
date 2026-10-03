@@ -17,6 +17,7 @@ export default defineConfig({
         icon(),
         sitemap({
             filter: page => !page.endsWith("/404/"),
+            i18n: { defaultLocale: "en", locales: { en: "en", es: "es", fr: "fr" } },
         }),
     ],
     vite: {

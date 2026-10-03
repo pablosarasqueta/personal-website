@@ -19,3 +19,6 @@ bun.lockb
 # Logs & misc
 *.log
 .DS_Store
+
+# Search engine verification files (must stay byte-exact)
+public/google*.html

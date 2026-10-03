@@ -77,6 +77,7 @@ const pages = defineCollection({
         title: z.string(),
         description: z.string(),
         ogDescription: z.string().optional(),
+        jobTitle: z.string().optional(),
         noindex: z.boolean().optional(),
         sections: indexSections.optional(),
         notFound: z
