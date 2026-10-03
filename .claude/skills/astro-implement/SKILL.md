@@ -18,20 +18,14 @@ is ambiguous about scope or behaviour, ask before building.
   `<Icon name="set:icon" />`, or place local SVGs in `src/icons/`.
 - **animejs** for animations (client-side only; see the anime.js section below).
 - **Content Collections + Zod** for any structured/repeated content (`src/content.config.ts`).
-- **@astrojs/node** adapter (standalone) for on-demand routes; **@astrojs/sitemap** for the sitemap.
+- **@astrojs/sitemap** for the sitemap.
 
-## Rendering: choose static vs SSR per route
+## Rendering: fully static
 
-`astro.config.mjs` uses `output: "static"` (the `hybrid` output no longer exists), so **every
-route is prerendered at build time by default**.
-Decide per page:
-
-- **Static (default):** content known at build time (landing, about, docs, blog posts). Do nothing:
-  it is already static. Prefer this; it is faster and cheaper.
-- **On-demand / SSR:** depends on the request (auth, form POST handling, per-request data, search).
-  Add `export const prerender = false;` at the top of that page or endpoint. The node adapter serves it.
-
-Never flip the whole project to `output: "server"` for one dynamic page; opt that single route out instead.
+`astro.config.mjs` uses `output: "static"` with no adapter: **every route is prerendered at build
+time** and `dist/` is deployed to a static server. There is no server runtime, so never use
+`export const prerender = false` or request-dependent APIs (`Astro.request`, cookies, POST handling).
+The 404 page is a single language-agnostic `404.html`, wired up for Hostinger in `public/.htaccess`.
 
 ## Project structure (place files accordingly)
 

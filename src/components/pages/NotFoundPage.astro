@@ -1,50 +1,45 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../sections/Header.astro";
 import Container from "../ui/Container.astro";
 import Button from "../ui/Button.astro";
-import TextLink from "../ui/TextLink.astro";
-import { EMAIL_URL } from "../../lib/seo";
 import { getPage } from "../../lib/content";
-import { localeHref, toLocale } from "../../lib/i18n";
+import { DEFAULT_LOCALE, LOCALES, localeHref } from "../../lib/i18n";
 
-const locale = toLocale(Astro.currentLocale);
-const page = await getPage(locale, "404");
-if (!page.notFound) throw new Error(`Missing notFound copy: add it to src/content/pages/${locale}/404.json`);
-const { code, titleLead, titleAccent, intro, home, email } = page.notFound;
+const copies = await Promise.all(
+    LOCALES.map(async locale => {
+        const page = await getPage(locale, "404");
+        if (!page.notFound) throw new Error(`Missing notFound copy: add it to src/content/pages/${locale}/404.json`);
+        return { ...page, ...page.notFound, locale };
+    }),
+);
+const { title, description, noindex } = copies.find(copy => copy.locale === DEFAULT_LOCALE)!;
 ---
 
-<BaseLayout title={page.title} description={page.description} lang={locale} noindex={page.noindex ?? true}>
-    <Header />
+<BaseLayout title={title} description={description} noindex={noindex ?? true}>
     <main>
-        <section class="flex min-h-[calc(100svh-68px)] items-center py-[clamp(56px,7vw,96px)]">
+        <section class="flex min-h-svh items-center py-[clamp(56px,7vw,96px)]">
             <Container>
                 <p
                     class="border-l-4 border-signal pl-3 font-display text-[15px] font-semibold text-muted motion-safe:opacity-0"
                     data-rise="0"
                 >
-                    {code}
+                    404
                 </p>
-                <h1 class="mt-6 max-w-[15ch] text-[clamp(40px,5.3vw,74px)] leading-[.98] font-extrabold tracking-[-.04em]">
-                    <span class="block motion-safe:opacity-0" data-rise="120">
-                        {titleLead}
-                    </span>
-                    <span class="block text-pine motion-safe:opacity-0" data-rise="300">
-                        {titleAccent}
-                    </span>
+                <h1 class="mt-6 text-[clamp(32px,4.4vw,60px)] leading-[1.05] font-extrabold tracking-[-.04em]">
+                    {copies.map(({ locale, titleLead }, i) => (
+                        <span
+                            lang={locale}
+                            class:list={["block motion-safe:opacity-0", i > 0 && "text-pine"]}
+                            data-rise={120 + i * 150}
+                        >
+                            {titleLead}
+                        </span>
+                    ))}
                 </h1>
-                <p
-                    class="mt-7 max-w-[52ch] text-[clamp(18px,1.6vw,21px)] leading-[1.6] text-ink-soft motion-safe:opacity-0"
-                    data-rise="500"
-                >
-                    {intro}
-                </p>
-                <div
-                    class="mt-8.5 flex flex-wrap items-center gap-x-6.5 gap-y-3.5 motion-safe:opacity-0"
-                    data-rise="650"
-                >
-                    <Button href={localeHref(locale)}>{home}</Button>
-                    <TextLink href={EMAIL_URL}>{email}</TextLink>
+                <div class="mt-8.5 flex flex-wrap gap-3.5 motion-safe:opacity-0" data-rise="650">
+                    {copies.map(({ locale, home }) => (
+                        <Button href={localeHref(locale)}>{home}</Button>
+                    ))}
                 </div>
             </Container>
         </section>

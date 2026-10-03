@@ -3,11 +3,7 @@
     "description": "La page que vous cherchez n'existe pas.",
     "noindex": true,
     "notFound": {
-        "code": "Erreur 404",
         "titleLead": "Cette page n'existe pas.",
-        "titleAccent": "Le reste du site, si.",
-        "intro": "Le lien est peut-être cassé ou la page a été déplacée. Tout sur mon travail, et comment me joindre, se trouve sur la page d'accueil.",
-        "home": "Retour à l'accueil",
-        "email": "Écrivez-moi"
+        "home": "Retour à l'accueil"
     }
 }

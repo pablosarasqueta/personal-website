@@ -80,12 +80,8 @@ const pages = defineCollection({
         sections: indexSections.optional(),
         notFound: z
             .object({
-                code: z.string(),
                 titleLead: z.string(),
-                titleAccent: z.string(),
-                intro: z.string(),
                 home: z.string(),
-                email: z.string(),
             })
             .optional(),
     }),

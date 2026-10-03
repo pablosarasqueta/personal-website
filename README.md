@@ -4,8 +4,8 @@ Astro project scaffolded from the `init-astro-project` template.
 
 ## Stack
 
-Astro (static + per-route SSR) · Tailwind CSS · TypeScript strict · astro-icon · animejs ·
-Content Collections + Zod · `@astrojs/node` (standalone) · `@astrojs/sitemap` · Prettier ·
+Astro (fully static) · Tailwind CSS · TypeScript strict · astro-icon · animejs ·
+Content Collections + Zod · `@astrojs/sitemap` · Prettier ·
 GitHub Actions CI (build / format / audit) · Dependabot.
 
 ## Local development
@@ -14,7 +14,7 @@ GitHub Actions CI (build / format / audit) · Dependabot.
 npm install
 npm run dev       # http://localhost:4321
 npm run format    # Prettier (CI runs format:check)
-npm run build     # static build + on-demand routes
+npm run build     # static build to dist/ (serve it with any static server)
 ```
 
 ## Conventions
