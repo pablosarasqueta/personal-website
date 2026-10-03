@@ -23,26 +23,29 @@ const { guide } = copy;
         </div>
     </div>
 
-    <div class="relative mt-[clamp(56px,7vw,88px)]">
+    <div data-route-track class="relative mt-[clamp(56px,7vw,88px)] [--end:20px] [--p:0]">
         <span
-            data-route-fill
             aria-hidden="true"
-            class="absolute top-5 bottom-5 left-[19px] z-1 w-[3px] origin-top scale-y-0 rounded-[2px] bg-pine print:hidden"
+            class="absolute top-5 bottom-(--end) left-[19px] z-1 w-[3px] origin-top scale-y-(--p) rounded-[2px] bg-linear-to-b from-pine to-signal print:hidden"
+        ></span>
+        <span
+            aria-hidden="true"
+            class="absolute top-[calc(20px+(100%-20px-var(--end))*var(--p))] left-[20.5px] z-1 size-2.5 -translate-1/2 rounded-full bg-signal shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-signal)_30%,transparent),0_0_18px_4px_var(--color-signal)] print:hidden"
         ></span>
         <ol
             data-route
             aria-label={copy.routeLabel}
-            class="relative before:absolute before:top-5 before:bottom-5 before:left-[19px] before:w-[3px] before:rounded-[2px] before:bg-line"
+            class="relative before:absolute before:top-5 before:bottom-(--end) before:left-[19px] before:w-[3px] before:bg-[repeating-linear-gradient(to_bottom,var(--color-line)_0_6px,transparent_6px_12px)]"
         >
             {stops.map(({ data }, i) => (
                 <li
                     data-stop
-                    class="group relative z-2 grid grid-cols-1 gap-x-12 gap-y-2 pb-11.5 pl-15.5 last:pb-0 md:grid-cols-[minmax(0,300px)_minmax(0,1fr)] md:pl-18"
+                    class="group relative z-2 grid grid-cols-1 gap-x-12 gap-y-2 pb-11.5 pl-15.5 not-data-reached:*:not-data-mark:opacity-45 last:pb-0 *:not-data-mark:transition-opacity *:not-data-mark:duration-500 md:grid-cols-[minmax(0,300px)_minmax(0,1fr)] md:pl-18 print:*:opacity-100!"
                 >
                     <span
                         data-mark
                         aria-hidden="true"
-                        class="absolute top-0 left-0 grid size-10.25 place-items-center rounded-full border-3 border-line bg-paper-2 font-display text-[15px] font-bold text-muted transition-[background-color,border-color,color] duration-350 group-data-reached:border-pine group-data-reached:bg-signal group-data-reached:text-ink dark:group-data-reached:text-paper motion-reduce:transition-none print:bg-white!"
+                        class="absolute top-0 left-0 grid size-10.25 scale-85 place-items-center rounded-full border-3 border-line bg-paper-2 font-display text-[15px] font-bold text-muted transition-[background-color,border-color,color,scale,box-shadow] duration-500 ease-[cubic-bezier(.34,1.56,.64,1)] before:absolute before:inset-0 before:-z-1 before:rounded-full before:bg-signal before:opacity-0 group-data-reached:scale-100 group-data-reached:border-pine group-data-reached:bg-signal group-data-reached:text-ink group-data-reached:shadow-[0_0_0_6px_color-mix(in_oklab,var(--color-signal)_22%,transparent)] dark:group-data-reached:text-paper motion-safe:group-data-current:before:animate-ping motion-safe:group-data-current:before:opacity-60 motion-reduce:transition-none print:scale-100 print:bg-white! print:shadow-none"
                     >
                         {i + 1}
                     </span>
@@ -95,23 +98,29 @@ const { guide } = copy;
     import { onScrollFrame } from "../../scripts/scroll";
 
     const route = document.querySelector<HTMLElement>("[data-route]");
-    const fill = document.querySelector<HTMLElement>("[data-route-fill]");
+    const track = document.querySelector<HTMLElement>("[data-route-track]");
     const stops = [...document.querySelectorAll<HTMLElement>("[data-stop]")];
+    const center = (stop: HTMLElement) => {
+        const mark = stop.querySelector("[data-mark]")!.getBoundingClientRect();
+        return mark.top + mark.height / 2;
+    };
 
-    if (route && fill) {
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            fill.style.scale = "1";
-            stops.forEach(stop => stop.toggleAttribute("data-reached", true));
-        } else {
-            onScrollFrame(() => {
-                const line = window.innerHeight * 0.6;
-                const r = route.getBoundingClientRect();
-                fill.style.scale = `1 ${Math.max(0, Math.min(1, (line - r.top) / r.height))}`;
-                stops.forEach(stop => {
-                    const mark = stop.querySelector("[data-mark]")?.getBoundingClientRect();
-                    stop.toggleAttribute("data-reached", !!mark && mark.top + mark.height / 2 < line);
-                });
+    if (route && track && stops.length) {
+        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        onScrollFrame(() => {
+            const line = window.innerHeight * 0.6;
+            const start = center(stops[0]);
+            const end = center(stops.at(-1)!);
+            track.style.setProperty("--end", `${route.getBoundingClientRect().bottom - end}px`);
+            track.style.setProperty(
+                "--p",
+                reduced ? "1" : String(Math.max(0, Math.min(1, (line - start) / (end - start)))),
+            );
+            const reached = reduced ? stops : stops.filter(stop => center(stop) < line);
+            stops.forEach(stop => {
+                stop.toggleAttribute("data-reached", reached.includes(stop));
+                stop.toggleAttribute("data-current", stop === reached.at(-1));
             });
-        }
+        });
     }
 </script>

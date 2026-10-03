@@ -6,21 +6,9 @@ Pending setup tasks for this fresh template. Delete each line once done.
 
 - [ ] `public/imgs/favicon/favicon.ico`
 - [ ] `public/imgs/favicon/favicon.png`
-- [ ] `public/imgs/favicon/og-image.png` (Open Graph / Twitter card image)
-
-## Configuration
-
-- [ ] Set the real production URL in `astro.config.mjs` (`site`) and in `src/lib/seo.ts` (`SITE_URL`).
-- [ ] Update the `Sitemap:` line in `public/robots.txt` with the production domain.
-- [ ] Fill in `README.md`.
-- [ ] Extend the `pages` collection schema in `src/content.config.ts` with the fields every page should
-      carry (e.g. `title`, `description`, `heading`, `noindex`), then fill in the TODO values in
-      `src/content/pages/index.json` and `src/content/pages/404.json`. This is the i18n swap point.
 
 ## Code
 
-- [ ] Implement the home page (`src/pages/index.astro` reads from the `pages` collection; build its
-      component under `src/components/pages/IndexPage.astro`).
 - [ ] Flesh out the SEO helpers (`src/lib/seo.ts`).
 
 ## Client scripts (when you need them)
